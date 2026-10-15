@@ -6,15 +6,46 @@ ADS-505 Applied Data Science for Business Team Project
 This project examines factors associated with energy
 consumption and efficiency in AI data centers.
 
-## Dataset
-Green AI Data Center Telemetry Dataset
-Source: Kaggle
-Observations: 10,000
-Variables: 15
+## Data Preparation and Reproducibility
 
-## Project Objectives
-- Explore factors influencing data center energy efficiency.
-- Prepare and transform the dataset for analysis.
-- Engineer relevant features.
-- Apply scaling and encoding where appropriate.
-- Develop statistical models and interpret findings.
+### Dataset
+The project uses the Green AI Data Center Telemetry Dataset by Deep Joshi (2026), available on Kaggle:
+
+https://www.kaggle.com/datasets/deeplumiere/green-ai-data-center-telemetry-dataset
+
+Download `green_ai_datacenter.csv` and place it inside the `data/` folder.
+
+### Python Requirements
+The preprocessing notebook uses the following libraries:
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- joblib
+
+### Running the Notebook
+1. Open `data_preparation.ipynb` in VS Code.
+2. Select a Python environment with the required libraries installed.
+3. Confirm that `data/green_ai_datacenter.csv` is available.
+4. Run the notebook cells in order.
+
+### Preprocessing Summary
+The dataset contains 10,000 observations and 15 original variables.
+
+The preprocessing workflow includes:
+- Replacing missing data center regions with "Unknown".
+- Checking for duplicate records and potential outliers.
+- Creating a temperature-cooling interaction feature.
+- Separating the efficiency classification target from predictors.
+- Using an 80/20 stratified training and testing split.
+- Standardizing numerical predictors.
+- One-hot encoding categorical predictors.
+
+The resulting datasets contain 24 features each, with 8,000 training observations and 2,000 testing observations.
+
+### Modeling Considerations
+PUE was excluded from the predictors to reduce potential target leakage when predicting energy efficiency classes.
+
+Preprocessing transformations were fitted using training data only. For cross-validation, transformations should be refitted within each training fold using a scikit-learn Pipeline.
+
+The saved preprocessing object is generated locally and is not included in the repository.
