@@ -1,0 +1,23 @@
+{
+    "dataset_name": "Green AI Data Center Telemetry",
+    "rows": 10000,
+    "columns": 15,
+    "features": {
+        "server_type": "str",
+        "cooling_type": "str",
+        "datacenter_region": "str",
+        "time_of_day": "str",
+        "workload_intensity": "float64",
+        "cpu_utilization": "float64",
+        "memory_utilization": "float64",
+        "network_throughput_gbps": "float64",
+        "inlet_temperature_c": "float64",
+        "cooling_efficiency": "float64",
+        "power_consumption_kw": "float64",
+        "carbon_emission_kg": "float64",
+        "compute_cost_usd": "float64",
+        "pue": "float64",
+        "energy_efficiency_class": "str"
+    },
+    "description": "Synthetic dataset for data center energy efficiency experiments."
+}
