@@ -49,3 +49,6 @@ PUE was excluded from the predictors to reduce potential target leakage when pre
 Preprocessing transformations were fitted using training data only. For cross-validation, transformations should be refitted within each training fold using a scikit-learn Pipeline.
 
 The saved preprocessing object is generated locally and is not included in the repository.
+
+### Modeling Results
+Three models were tested with and without the PUE variable. All models performed significantly better when PUE was kept as a predictor, but Random Forest and XGBoost particularly showed promising predictive capabilities. The final selected model was XGBoost, as it minimized the proportion of classification errors on all classes. 
