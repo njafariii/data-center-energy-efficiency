@@ -52,3 +52,20 @@ The saved preprocessing object is generated locally and is not included in the r
 
 ### Modeling Results
 Three models were tested with and without the PUE variable. All models performed significantly better when PUE was kept as a predictor, but Random Forest and XGBoost particularly showed promising predictive capabilities. The final selected model was XGBoost, as it minimized the proportion of classification errors on all classes. 
+
+### Nessa Jafari was responsible for:
+- Domain research
+- Problem statement and data set investigation
+- Explore initial findings
+- Discussion and conclusion
+
+### Hannah Rueter was responsible for:
+- Data preparation and transformation
+- Feature Engineering 
+- Scaling/Encoding as needed
+
+### Veronica Burke was responsible for:
+- Train and fit multiple ML models 
+- Compare model performances
+- Prioritize appropriate evaluation metrics and select optimal model
+
